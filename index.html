@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ANIEDIT__UZ Web App</title>
+  <style>
+    /* Asosiy fon va shrift */
+    body {
+      margin: 0;
+      padding: 0;
+      background: #0a0a23;
+      color: #0ff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      justify-content: center;
+      text-align: center;
+      user-select: none;
+    }
+
+    h1 {
+      margin-bottom: 40px;
+      text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+    }
+
+    /* Tugmalar konteyneri */
+    .button-container {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      flex-wrap: wrap;
+      width: 100%;
+      max-width: 600px;
+    }
+
+    /* Tugmalar uslubi */
+    button {
+      background: linear-gradient(135deg, #00ffff, #00aaff);
+      border: none;
+      border-radius: 12px;
+      padding: 15px 25px;
+      font-size: 18px;
+      color: #001a33;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow:
+        0 0 5px #00ffff,
+        0 0 10px #00ffff,
+        0 0 20px #00ffff,
+        0 0 40px #00ffff;
+      transition: all 0.3s ease;
+      min-width: 180px;
+      user-select: none;
+    }
+
+    button:hover {
+      background: linear-gradient(135deg, #00aaff, #00ffff);
+      box-shadow:
+        0 0 15px #00ffff,
+        0 0 30px #00ffff,
+        0 0 50px #00ffff,
+        0 0 70px #00ffff;
+      color: #ffffff;
+      transform: scale(1.05);
+    }
+
+    /* Telefonlarda va tor ekranlarda */
+    @media (max-width: 480px) {
+      .button-container {
+        flex-direction: column;
+        gap: 20px;
+        max-width: 300px;
+      }
+      button {
+        min-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>ANIEDIT__UZ Web App</h1>
+  <div class="button-container">
+    <button onclick="openLink('https://www.instagram.com/aniedit__uz?igsh=MWZncXlvanFrOWEzaw==')">AniEdit__uz Instagram</button>
+    <button onclick="startGame()">Boshlash</button>
+    <button onclick="openLink('https://www.instagram.com/unlim.ed1tz?igsh=N3FsMTAwYTVpZGd2')">Unlim.Ed1tz Instagram</button>
+  </div>
+
+  <script>
+    function openLink(url) {
+      window.open(url, '_blank');
+    }
+
+    function startGame() {
+      alert("O'yin boshlanadi!");
+      // Bu yerga o'yin kodini yoki Web App funksiyalarini yozishingiz mumkin
+    }
+  </script>
+</body>
+</html>
